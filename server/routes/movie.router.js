@@ -16,6 +16,35 @@ router.get('/', (req, res) => {
 
 });
 
+
+router.get('/:id', (req, res) => {
+    //console.log('in get', req.params.id);
+    const movieId = req.params.id;
+    const sqlText = `SELECT
+        "movies".id,
+        "movies".title,
+        "movies".poster,
+        "movies".description,
+        ARRAY_AGG("genres".name) 
+      FROM "movies_genres"
+      JOIN "movies" ON "movies_genres".movie_id = "movies".id
+      JOIN "genres" ON "movies_genres".genre_id = "genres".id
+      WHERE "movies".id = $1
+      GROUP BY "movies".id;`;
+      // accepts a set of values and returns an array in which each value in the set 
+    pool
+      .query(sqlText, [movieId])
+      .then((dbRes) => {
+        res.send(dbRes.rows);
+      })
+      .catch((error) => {
+        console.log('Error in get query', error);
+        res.sendStatus(500);
+      });
+  });
+
+
+
 router.post('/', (req, res) => {
   console.log(req.body);
   // RETURNING "id" will give us back the id of the created movie
