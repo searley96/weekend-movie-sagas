@@ -3,7 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import './MovieList.css'
 import { useHistory } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
-import Container from '@material-ui/core/Container';
+// import Container from '@material-ui/core/Container';
+// import { createStyles, Grid, makeStyles, Paper } from '@mui/material';
 
 
 
