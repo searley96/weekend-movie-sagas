@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './MovieList.css'
 import { useHistory } from 'react-router-dom';
+import Typography from '@mui/material/Typography';
+import Container from '@material-ui/core/Container';
+
 
 
 function MovieList() {
@@ -11,18 +14,7 @@ function MovieList() {
     const dispatch = useDispatch();
 
     const movies = useSelector(store => store.movies);
-
-
-    //on movie click, taken to details page
-    // const detailsPage = (movie) => {
-    //     event.preventDefault();
-    //     dispatch({
-    //         type: "SET_DETAIL",
-    //         payload: movie
-    //     })
-    //     console.log('id', movie.id)
-    //     history.push("/details");
-    // }
+  
 
     // //fetch movie details on page load
     useEffect(() => {
@@ -31,12 +23,17 @@ function MovieList() {
 
     return (
         <main>
-            <h1>MovieList</h1>
+            <Typography variant = "h3"
+            color = "secondary"
+            >MovieList</Typography>
             <section className="movies">
                 {movies.map(movie => {
                     return (
                         <div key={movie.id} >
-                            <h3>{movie.title}</h3>
+                            <Typography variant = "h6"
+                            color = "secondary"
+                            align = "center"
+                            >{movie.title}</Typography>
                             <img onClick={() => {
                                 dispatch({
                                     type: "SET_DETAIL",

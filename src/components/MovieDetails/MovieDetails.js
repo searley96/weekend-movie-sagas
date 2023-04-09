@@ -1,6 +1,8 @@
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect } from 'react';
+import Button from '@mui/material/Button';
+import { Typography } from "@mui/material";
 
 
 function MovieDetails() {     
@@ -8,6 +10,7 @@ function MovieDetails() {
 
    const movieDetails = useSelector(store => store.movieDetails)
    console.log('movie detail', movieDetails)
+  
 
    const history = useHistory();
 
@@ -18,7 +21,9 @@ function MovieDetails() {
 
    return (
    <>
-    <h1>Movie Details</h1>
+    <Typography variant = "h3"
+    color = "secondary"
+    >Movie Details</Typography>
     {movieDetails.length ?
     <>
             <img src={movieDetails[0].poster} />
@@ -31,7 +36,11 @@ function MovieDetails() {
             ))}
         </>
         : <p>Waiting For Movie</p>}
-    <button onClick={handleBackToList}>Back to Movie List</button>
+    <Button 
+    variant="contained" 
+    size="large" 
+    color="secondary"
+    onClick={handleBackToList}>Back to Movie List</Button>
 </>)
 }
 

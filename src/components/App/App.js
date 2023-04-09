@@ -1,7 +1,8 @@
 import {HashRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import MovieList from '../MovieList/MovieList'
-import MovieDetails from '../MovieDetails/MovieDetails';
+import MovieDetails from '../MovieDetails/MovieDetails' 
+import Typography from '@mui/material/Typography';
 
 function App() {
 
@@ -9,7 +10,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>The Movies Saga!</h1>
+      <Typography variant = "h1"
+      color = "secondary"
+
+      >The Movies Saga!</Typography>
       <Router>        
         <Route path="/" exact>
           <MovieList />
