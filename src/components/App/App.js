@@ -1,24 +1,24 @@
-import {HashRouter as Router, Route} from 'react-router-dom';
-import './App.css';
-import MovieList from '../MovieList/MovieList'
-import MovieDetails from '../MovieDetails/MovieDetails' 
-import Typography from '@mui/material/Typography';
+import { HashRouter as Router, Route } from "react-router-dom";
+import "./App.css";
+import MovieList from "../MovieList/MovieList";
+import MovieDetails from "../MovieDetails/MovieDetails";
+import Typography from "@mui/material/Typography";
+import { Grid, Paper } from "@mui/material";
 
 function App() {
-
-
-
   return (
     <div className="App">
-      <Typography variant = "h1"
-      color = "secondary"
-
-      >The Movies Saga!</Typography>
-      <Router>        
+       <Paper elevation={7}>
+      <Typography variant="h1" color="secondary">
+        The Movies Saga!
+      </Typography>
+      </Paper>
+      <br></br>
+      <Router>
         <Route path="/" exact>
           <MovieList />
         </Route>
-     
+
         {/* Details page */}
         <Route path="/details">
           <MovieDetails />
@@ -29,6 +29,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;

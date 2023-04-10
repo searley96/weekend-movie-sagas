@@ -1,54 +1,72 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import './MovieList.css'
-import { useHistory } from 'react-router-dom';
-import Typography from '@mui/material/Typography';
-// import Container from '@material-ui/core/Container';
-// import { createStyles, Grid, makeStyles, Paper } from '@mui/material';
-
-
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import "./MovieList.css";
+import { useHistory } from "react-router-dom";
+import Typography from "@mui/material/Typography";
+import { Grid, Paper } from "@mui/material";
 
 function MovieList() {
+  const history = useHistory();
 
-    const history = useHistory();
+  const dispatch = useDispatch();
 
-    const dispatch = useDispatch();
+  const movies = useSelector((store) => store.movies);
 
-    const movies = useSelector(store => store.movies);
-  
+  // //fetch movie details on page load
+  useEffect(() => {
+    dispatch({ type: "FETCH_MOVIES" });
+  }, []);
 
-    // //fetch movie details on page load
-    useEffect(() => {
-        dispatch({ type: 'FETCH_MOVIES' });
-    }, []);
-
-    return (
-        <main>
-            <Typography variant = "h3"
-            color = "secondary"
-            >MovieList</Typography>
-            <section className="movies">
-                {movies.map(movie => {
-                    return (
-                        <div key={movie.id} >
-                            <Typography variant = "h6"
-                            color = "secondary"
-                            align = "center"
-                            >{movie.title}</Typography>
-                            <img onClick={() => {
-                                dispatch({
-                                    type: "SET_DETAIL",
-                                    payload: movie.id
-                                });
-                                history.push("/details");
-                             }} src={movie.poster} alt={movie.title}/>
-                        </div>
-                    );
+  return (
+    <Grid container direction="column" spacing={2}>
+      <main>
+        <Grid item xs={12}>
+          <Typography variant="h2" color="secondary">
+            MovieList
+          </Typography>
+        </Grid>
+        <br></br>
+        <Grid item xs={12}>
+            <Grid
+              container
+              alignItems="center"
+              justify="space-evenly"
+              spacing={4}
+            >
+              <br></br>
+              <section className="movies">
+                {movies.map((movie) => {
+                  return (
+                    <Grid item key={movie.id} xs={4}>
+                      <div key={movie.id}>
+                        <Typography
+                          variant="h6"
+                          color="secondary"
+                          align="center"
+                        >
+                          {movie.title}
+                        </Typography>
+                        <img
+                          onClick={() => {
+                            dispatch({
+                              type: "SET_DETAIL",
+                              payload: movie.id,
+                            });
+                            history.push("/details");
+                          }}
+                          src={movie.poster}
+                          alt={movie.title}
+                        />
+                      </div>
+                    </Grid>
+                  );
                 })}
-            </section>
-        </main>
-
-    );
+              </section>
+            </Grid>
+        </Grid>
+      </main>
+    </Grid>
+  );
 }
 
 export default MovieList;
