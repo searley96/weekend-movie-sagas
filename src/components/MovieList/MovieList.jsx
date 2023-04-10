@@ -21,7 +21,7 @@ function MovieList() {
     <Grid container direction="column" spacing={2}>
       <main>
         <Grid item xs={12}>
-          <Typography variant="h2" color="secondary">
+          <Typography variant="h2" color="primary">
             MovieList
           </Typography>
         </Grid>
@@ -41,7 +41,7 @@ function MovieList() {
                       <div key={movie.id}>
                         <Typography
                           variant="h6"
-                          color="secondary"
+                          color="primary"
                           align="center"
                         >
                           {movie.title}

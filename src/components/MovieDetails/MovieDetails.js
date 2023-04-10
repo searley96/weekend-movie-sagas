@@ -18,7 +18,7 @@ function MovieDetails() {
   return (
     <>
    
-      <Typography variant="h3" color="secondary">
+      <Typography variant="h3" color="primary">
         Movie Details
       </Typography>
     
@@ -28,10 +28,10 @@ function MovieDetails() {
           <img src={movieDetails[0].poster} />
         
           <Typography variant="h5" color="primary">
-            <p>Title: {movieDetails[0].title}</p>
+            <p>{movieDetails[0].title}</p>
           </Typography>
           <Typography color="primary">
-            <p>Description: {movieDetails[0].description}</p>
+            <p>{movieDetails[0].description}</p>
           </Typography>
           {movieDetails.map((title) => (
             <ul key={title.id}>
@@ -45,7 +45,7 @@ function MovieDetails() {
       <Button
         variant="contained"
         size="large"
-        color="secondary"
+        color="primary"
         onClick={handleBackToList}
       >
         Back to Movie List

@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
        <Paper elevation={7}>
-      <Typography variant="h1" color="secondary">
+      <Typography variant="h1" color="primary">
         The Movies Saga!
       </Typography>
       </Paper>
