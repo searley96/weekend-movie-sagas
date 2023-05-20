@@ -1,9 +1,24 @@
-# Project Name
+Movie-Saga-Generate
+React-Redux with Redux-Sagas
+We were given an existing Movie App that needed features added using React-Redux and Redux-Sagas and a database that needed to be joined.
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+Features
+When a movie is clicked, the user can see the movie and it's details
+Detail Page shows all details, including All genres for that selected movie
+Detail Page has a button to return to the home page
 
-## Description
+Screen Shot
 
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+Prerequisites
+Node.js
+SQL
+React.js
+React-Redux
+Redux-Saga
+Installation
+Create a database named: "saga_movies_weekend"
+The queries in the database.sql file are set up to create all the necessary tables and populate the needed data to allow the application to run correctly. The project is built on Postgres, so you will need to make sure to have that installed. We recommend using Postico to run those queries as that was used to create the queries
+Open up your editor of choice and run an npm install
+Run npm run server in your terminal
+Run npm run client in your terminal
+The npm run client command will open up a new browser tab for you!
