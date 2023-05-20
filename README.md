@@ -1,4 +1,4 @@
-#Movie-Saga-Generate
+Movie-Saga-Generate
 React-Redux with Redux-Sagas
 We were given an existing Movie App that needed features added using React-Redux and Redux-Sagas and a database that needed to be joined.
 
