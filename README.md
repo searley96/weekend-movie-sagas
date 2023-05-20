@@ -9,8 +9,6 @@ When a movie is clicked, the user can see the movie and it's details
 Detail Page shows all details, including All genres for that selected movie
 Detail Page has a button to return to the home page
 
-# Screen Shot
-
 # Prerequisites
 -Node.js
 -SQL
