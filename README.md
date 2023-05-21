@@ -13,9 +13,9 @@ We were given an existing Movie App that needed features added using React-Redux
 
 
 # Features:
-When a movie is clicked, the user can see the movie and it's details
-Detail Page shows all details, including All genres for that selected movie
-Detail Page has a button to return to the home page
+When a movie is clicked, the user can see the movie and it's details.
+The Detail Page shows all movies details, including all genres for that selected movie.
+The Detail Page has a back button to return to the home page.
 
 # Prerequisites
 -Node.js
