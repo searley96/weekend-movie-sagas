@@ -20,11 +20,7 @@ function MovieList() {
   return (
     <Grid container direction="column" spacing={2}>
       <main>
-        <Grid item xs={12}>
-          <Typography variant="h2" color="primary">
-            Movie List
-          </Typography>
-        </Grid>
+       
         <br></br>
         <Grid item xs={12}>
             <Grid
