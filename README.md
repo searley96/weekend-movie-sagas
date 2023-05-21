@@ -5,7 +5,9 @@ React-Redux with Redux-Sagas
 We were given an existing Movie App that needed features added using React-Redux and Redux-Sagas and a database that needed to be joined.
 
 # ScreenShots
-<img width="1385" alt="Screenshot 2023-05-21 at 1 18 57 PM" src="https://github.com/searley96/weekend-movie-sagas/assets/119346063/db0b57e5-1e17-4477-a104-ea2ba51b64e6">
+
+<img width="1348" alt="Screenshot 2023-05-21 at 1 22 49 PM" src="https://github.com/searley96/weekend-movie-sagas/assets/119346063/0b268910-b18e-4477-be74-110dae5762d0">
+
 
 <img width="1389" alt="Screenshot 2023-05-21 at 1 19 36 PM" src="https://github.com/searley96/weekend-movie-sagas/assets/119346063/1f7a3654-48ab-4426-886b-813ebcc529fe">
 
