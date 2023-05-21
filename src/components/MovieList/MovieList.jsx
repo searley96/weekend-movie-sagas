@@ -12,7 +12,7 @@ function MovieList() {
 
   const movies = useSelector((store) => store.movies);
 
-  // //fetch movie details on page load
+   //fetch movie details on page load
   useEffect(() => {
     dispatch({ type: "FETCH_MOVIES" });
   }, []);
@@ -22,7 +22,7 @@ function MovieList() {
       <main>
         <Grid item xs={12}>
           <Typography variant="h2" color="primary">
-            MovieList
+            Movie List
           </Typography>
         </Grid>
         <br></br>
@@ -49,7 +49,7 @@ function MovieList() {
                         <img
                           onClick={() => {
                             dispatch({
-                              type: "SET_DETAIL",
+                              type: "FETCH_DETAIL",
                               payload: movie.id,
                             });
                             history.push("/details");

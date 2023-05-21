@@ -8,7 +8,7 @@ import { Grid, Paper } from "@mui/material";
 function App() {
   return (
     <div className="App">
-       <Paper elevation={7}>
+       <Paper elevation={10}>
       <Typography variant="h1" color="primary">
         The Movies Saga!
       </Typography>
